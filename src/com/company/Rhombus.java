@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 /*
 * Class Rhombus
 
@@ -65,4 +67,27 @@ public class Rhombus {
         return (2*getArea()/(this.diagonal_1));
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rhombus rhombus = (Rhombus) o;
+        return Double.compare(rhombus.getLength(), getLength()) == 0 &&
+                Double.compare(rhombus.getWidths(), getWidths()) == 0 &&
+                Double.compare(rhombus.getDiagonal_1(), getDiagonal_1()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getLength(), getWidths(), getDiagonal_1());
+    }
+
+    @Override
+    public String toString() {
+        return "Rhombus{" +
+                "length=" + length +
+                ", widths=" + widths +
+                ", diagonal_1=" + diagonal_1 +
+                '}';
+    }
 }

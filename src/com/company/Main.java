@@ -11,7 +11,8 @@ public class Main {
         System.out.println( " Radius circle inscribed in a rhombus = "+ myGarden.getRadius());
         System.out.println( " Sin(a) = " + myGarden.getSinAngle());
         System.out.println( " Diagonal Rhombus = " + myGarden.getDiagonal_2());
-
+        System.out.println(myGarden.toString());
+        System.out.println(myGarden.hashCode());
 
     }
 }
